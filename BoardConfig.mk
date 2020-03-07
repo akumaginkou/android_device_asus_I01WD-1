@@ -154,3 +154,7 @@ PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/product/private
 # Treble
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 BOARD_VNDK_VERSION := current
+
+# Vendor init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_I01WD
+TARGET_RECOVERY_DEVICE_MODULES := libinit_I01WD
