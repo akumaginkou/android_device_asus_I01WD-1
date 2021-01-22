@@ -19,7 +19,19 @@
 # product configuration (apps).
 #
 
+<<<<<<< HEAD:bliss_I01WD.mk
 # SELINUX_IGNORE_NEVERALLOWS := true
+=======
+SELINUX_IGNORE_NEVERALLOWS := true
+
+# GApps
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+
+
+>>>>>>> 18494b3 (I01WD: Add qHDR control):aosp_I01WD.mk
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
