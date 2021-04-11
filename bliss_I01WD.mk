@@ -20,10 +20,6 @@
 #
 
 # SELINUX_IGNORE_NEVERALLOWS := true
-
-# GApps
-WITH_CORE_GAPPS := true
-
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -33,14 +29,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 TARGET_BOOT_ANIMATION_RES := 2280
 
 # Inherit some common AOSP-OMS stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/asus/I01WD/device.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_DEVICE := I01WD
-PRODUCT_NAME := aosp_I01WD
+PRODUCT_NAME := bliss_I01WD
 PRODUCT_BRAND := Asus
 PRODUCT_MODEL := ASUS_I01WD
 PRODUCT_MANUFACTURER := Asus
@@ -63,6 +59,3 @@ VENDOR_RELEASE := 11/RKQ1.200710.002/18.0610.2106.156-0:user/release-keys
 BUILD_FINGERPRINT := asus/WW_I01WD/ASUS_I01WD:$(VENDOR_RELEASE)
 
 PLATFORM_SECURITY_PATCH_OVERRIDE := 2021-06-01
-
-# Signing Keys
-PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/oss/keys/releasekey
