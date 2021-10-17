@@ -146,8 +146,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/googlekey_input.kl:system/usr/keylayout/googlekey_input.kl
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service-sdm
+#PRODUCT_PACKAGES += \
+#    lineage.livedisplay@2.0-service-sdm
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
