@@ -222,8 +222,8 @@ PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Touch
-PRODUCT_PACKAGES += \
-    lineage.touch@1.0-service.asus_msmnile
+#PRODUCT_PACKAGES += \
+#    lineage.touch@1.0-service.asus_msmnile
 
 # Update engine
 PRODUCT_PACKAGES += \
